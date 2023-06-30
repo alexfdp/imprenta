@@ -11,59 +11,6 @@
   padding: 0%;
   padding-top: 0%;
 }
-
-// element.style {
-//   height: 100%;
-//   flex-direction: row;
-//   box-sizing: border-box;
-//   display: flex;
-//   place-content: center space-around;
-//   align-items: center;
-// }
-
-
-.contededor {
-  height: 100%;
-  min-height: 100%;
-  min-width: 100%;
-  width: 100%;
-  flex-direction: row;
-  box-sizing: border-box;
-  display: flex;
+.logo{
+  max-width: 250px;
 }
-
-.one {
-  place-content: center;
-  align-items: center;
-  flex-direction: row;
-  box-sizing: border-box;
-  display: flex;
-  flex: 1 1 100%;
-  max-width: 20%;
-}
-
-.two {
-  place-content: center;
-  align-items: center;
-  flex-direction: row;
-  box-sizing: border-box;
-  display: flex;
-  flex: 1 1 100%;
-  max-width: 80%;
-}
-
-// .toolbar_app {
-//   margin: 0;
-// }
-
-
-
-// .containe{
-//   --bs-gutter-x: 1.5rem;
-//   --bs-gutter-y: 0;
-//   width: 100%;
-//   padding-right: calc(var(--bs-gutter-x) * .5);
-//   padding-left: calc(var(--bs-gutter-x) * .5);
-//   margin-right: auto;
-//   margin-left: auto
-// }

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
   <p></p>
   <mat-card class="card_title">
     <mat-card-content class="mat_card_title">
@@ -22,13 +22,13 @@
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./assets/images/bg8.jpg" class="d-block w-100" alt="...">
+        <img src="./assets/images/bg8.jpg" class="d-block w-100 carta" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/images/imagen_random_1.jpg" class="d-block w-100" alt="...">
+        <img src="./assets/images/imagen_random_1.jpg" class="d-block w-100 carta" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/images/imagen_random_2.png" class="d-block w-100" alt="...">
+        <img src="./assets/images/imagen_random_2.png" class="d-block w-100 carta" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -110,15 +110,46 @@
   <p></p>
   <p></p>
 </div>
-<footer>
+
+<footer class="pie_web">
   <div class="outerContainer">
-    <div fxLayout="row" fxLayoutGap="5px" class="container" fxLayoutAlign="space-around center">
-      <div fxLayoutAlign="center center">
-          <img  class="logo" src="./assets/images/logo_margraf_nombre.jpg" alt="">
+    <div fxLayout="column" fxLayoutAlign="space-evenly stretch">
+      <div>
+        <div fxLayout="row" class="container" fxLayoutAlign="space-around center">
+          <div fxFlex="30" fxLayoutAlign="center center" class="caja_footer_1">
+            <div fxLayout="column" fxLayoutAlign="space-evenly start">
+              <img class="logo" src="./assets/images/logo_margraf_nombre.jpg" alt="">
+              <h3 class="text_footer">Empresa</h3>
+              <p class="text_footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, debitis fugiat
+                temporibus atque harum adipisci officia, explicabo distinctio quae cum nostrum minima consectetur nisi
+                cumque optio ratione animi, quod deserunt.</p>
+            </div>
+          </div>
+          <div fxFlex="30" fxLayoutAlign="center center" class="text_footer">
+            <div fxLayout="column" fxLayoutAlign="space-evenly start">
+              <h4>Empresa</h4>
+              <h6>Dato 1</h6>
+              <h6>Dato 2</h6>
+              <h6>Dato 3</h6>
+              <h6>Dato 4</h6>
+            </div>
+          </div>
+          <div fxFlex="30" fxLayoutAlign="center center" class="text_footer">
+            <div fxLayout="column" fxLayoutAlign="space-evenly start">
+              <h4>Productos</h4>
+              <h6>Dato 1</h6>
+              <h6>Dato 2</h6>
+              <h6>Dato 3</h6>
+              <h6>Dato 4</h6>
+            </div>
+          </div>
+          <div fxFlex="10"></div>
+        </div>
       </div>
-      <div fxLayoutAlign="center center">2</div>
-      <div fxLayoutAlign="center center">3</div>
-      <div></div>
+      <hr class="solid">
+      <div fxLayoutAlign="center center" class="container">
+        <h4 class="text_footer">Todos los derechos reservados</h4>
+      </div>
     </div>
   </div>
 </footer>

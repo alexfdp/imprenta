@@ -83,6 +83,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   text-decoration: none;
   font-family: Helvetica, Arial, sans-serif;
 }
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/poppins/Poppins-Regular.ttf');
+}
 
 body .principal{
 height: 100vh;

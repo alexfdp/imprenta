@@ -23,6 +23,7 @@ import { GridModule } from "@angular/flex-layout/grid";
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     principalRoutingModule,
     MatToolbarModule,
     MatIconModule,

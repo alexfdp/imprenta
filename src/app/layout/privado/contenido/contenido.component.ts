@@ -1,5 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatDrawerMode } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-contenido',
@@ -7,12 +9,6 @@ import { ChangeDetectorRef, Component } from '@angular/core';
   styleUrls: ['./contenido.component.scss']
 })
 export class ContenidoComponent {
-  mobileQuery: MediaQueryList;
-  private _mobileQueryListener: () => void;
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 768px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addEventListener('change', this._mobileQueryListener);
+ 
 
-  }
 }

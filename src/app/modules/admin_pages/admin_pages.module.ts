@@ -19,6 +19,8 @@ import {MatTableModule} from '@angular/material/table';
 import { AnalisisComponent } from './pages/analisis/analisis.component';
 import { InventarioComponent } from './pages/inventario/inventario.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { FacturaComponent } from './pages/factura/factura.component';
+import { ClientesComponent } from './pages/clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { PedidosComponent } from './pages/pedidos/pedidos.component';
     VentasComponent,
     AnalisisComponent,
     InventarioComponent,
-    PedidosComponent
+    PedidosComponent,
+    FacturaComponent,
+    ClientesComponent
   ],
   imports: [
     CommonModule,

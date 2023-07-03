@@ -14,7 +14,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BienvenidaComponent } from './layout/publico/bienvenida/bienvenida.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatRadioModule} from '@angular/material/radio';
 import { MatDrawer, MatDrawerContainer, MatSidenavModule } from '@angular/material/sidenav';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,11 @@ import { MatDrawer, MatDrawerContainer, MatSidenavModule } from '@angular/materi
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatRadioModule,
     MatToolbarModule,
     MatCardModule,
     MatDividerModule,

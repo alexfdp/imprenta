@@ -6,23 +6,6 @@
     align-items: center;
   }
 
-  mat-drawer {
-    margin: 16px;
-    width: 200px;
-    border-right: none;
-    background: blue;
-    color: white;
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
-  }
-
-  mat-drawer button span,
-  mat-drawer button mat-icon {
-    color: #fff;
-  }
-
-
   .menu-button {
     width: 100%;
     display: flex;
@@ -52,10 +35,44 @@
     background-color: rgba(255, 255, 255, 0.5);
   }
 
-
   .content {
     height: calc(100vh - 98px);
     border-radius: 10px;
     margin: 16px;
     margin-left: 32px;
+  }
+  .example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-radio-group {
+    display: block;
+    border: 1px solid #555;
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  mat-sidenav button span,
+  mat-sidenav button mat-icon {
+    color: #fff;
+  }
+
+  .optionActive{
+    --tw-bg-opacity: 1;
+    background-color: rgb(7 109 183 / var(--tw-bg-opacity))
   }

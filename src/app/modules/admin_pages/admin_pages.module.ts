@@ -1,43 +1,48 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './pages/admin/admin.component';
-import { DataComponent } from './pages/data/data.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { admnRoutingModule } from './admn-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { RouterModule } from '@angular/router';
+import { admin_pagesRoutingModule } from './admin_pages-routing.module';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { VentasComponent } from './pages/ventas/ventas.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import { AnalisisComponent } from './pages/analisis/analisis.component';
+import { InventarioComponent } from './pages/inventario/inventario.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
-    AdminComponent,
-    DataComponent
+    UsuariosComponent,
+    VentasComponent,
+    AnalisisComponent,
+    InventarioComponent,
+    PedidosComponent
   ],
   imports: [
-    // CommonModule,
-    // FormsModule,
-    // ReactiveFormsModule,
-    RouterModule,
-    admnRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    admin_pagesRoutingModule,
     MatIconModule,
-    MatButtonModule,
+    MatTableModule,
     MatToolbarModule,
+    MatFormFieldModule,
     MatCardModule,
     MatDividerModule,
     MatSidenavModule,
     MatPaginatorModule,
     MatButtonModule,
     FlexLayoutModule
-  ],providers: []
+  ]
 })
-export class AdmnModule { }
+export class admin_pagesModule { }

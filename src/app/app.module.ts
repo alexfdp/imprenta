@@ -13,6 +13,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BienvenidaComponent } from './layout/publico/bienvenida/bienvenida.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDrawer, MatDrawerContainer, MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
-    MatPaginatorModule,
+    MatDividerModule,
+    MatSidenavModule,
     MatButtonModule,
+    MatPaginatorModule,
     FlexLayoutModule,
     NgbModule
   ],

@@ -7,10 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./principal.component.scss']
 })
 export class PrincipalComponent {
+  constructor(private routerprd: Router) { }
 
-  constructor(private routerprd: Router){ }
-  
-  public abrirLogin(){
-    this.routerprd.navigateByUrl("/sinsesion/login");
+  public abrirLogin() {
+    this.routerprd.navigate(['/sinsesion/login']);
   }
 }

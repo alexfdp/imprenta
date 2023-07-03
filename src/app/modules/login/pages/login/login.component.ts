@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     if (!this.loginAuth.ingresarAplicativo(this.myForm.value)) {
       alert("Usuario o contraseña incorrecto");
     } else {
-      this.routerprd.navigateByUrl("/admin/admin");
+      this.routerprd.navigateByUrl("/admin/users");
     }
   }
 

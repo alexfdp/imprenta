@@ -2,27 +2,32 @@
   flex: 1 1 auto;
 }
 
-.card_title {
-  background-color: #3F51B5;
-  padding-top: 0%;
+.toolbar_custo {
+  border-radius: 5px;
+  // position: fixed;
+  // z-index: 1;
 }
 
-.mat_card_title {
-  padding: 0%;
-  padding-top: 0%;
+.carta {
+  max-height: 500px;
+  object-fit: cover;
 }
 
-.pie_web{
-  background-color: #242637;
-}
-
-.carta{
+.conte_carouse {
   max-height: 500px;
 }
 
-.text_footer{
+.pie_web {
+  background-color: #242637;
+}
+
+.text_footer {
   color: white;
   font-family: 'Poppins';
+}
+
+.texto_for {
+  text-align: justify;
 }
 
 hr.solid {
@@ -31,10 +36,19 @@ hr.solid {
   margin-right: 7%;
 }
 
-.caja_footer_1{
+.caja_footer_1 {
   padding-top: 20px;
 }
 
-.logo{
+.logo {
   max-width: 250px;
+}
+
+.card_tam {
+  max-width: 350px;
+}
+
+.img_card {
+  max-height: 280px;
+  object-fit: cover;
 }

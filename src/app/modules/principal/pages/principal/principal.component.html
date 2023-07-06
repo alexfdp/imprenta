@@ -1,34 +1,35 @@
 <div class="container">
   <p></p>
-  <mat-card class="card_title">
-    <mat-card-content class="mat_card_title">
-      <mat-toolbar class="toolbar_app" color="primary">
-        <button mat-button>
-          <span>Imprenta Margraf</span>
-        </button>
-        <span class="example-spacer"></span>
-        <button (click)="abrirLogin()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon>person</mat-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon>shopping_cart</mat-icon>
-        </button>
-      </mat-toolbar>
-    </mat-card-content>
-  </mat-card>
+
+  <mat-toolbar class="toolbar_app toolbar_custo" color="primary">
+    <button mat-button>
+      <span>Imprenta Margraf</span>
+    </button>
+    <span class="example-spacer"></span>
+    <button (click)="abrirLogin()" mat-icon-button class="example-icon"
+      aria-label="Example icon-button with share icon">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
 
   <p></p>
 
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+    <div class="carousel-inner conte_carouse">
       <div class="carousel-item active">
-        <img src="./assets/images/bg8.jpg" class="d-block w-100 carta" alt="...">
+        <img src="./assets/images/carousel_1.jpg" class="d-block w-100 carta" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/images/imagen_random_1.jpg" class="d-block w-100 carta" alt="...">
+        <img src="./assets/images/carousel_2.jpg" class="d-block w-100 carta" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/images/imagen_random_2.png" class="d-block w-100 carta" alt="...">
+        <img src="./assets/images/carousel_3.jpg" class="d-block w-100 carta" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/carousel_4.jpg" class="d-block w-100 carta" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -45,64 +46,100 @@
 
   <p></p>
 
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col">
-      <div class="card">
-        <img src="./assets/images/Logo.png" class="card-img-top" alt="...">
+      <div class="card h-100 card_tam">
+        <img src="./assets/images/products/agendas.jpg" class="card-img-top img_card" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">AGENDAS</h5>
+          <p class="card-text texto_for">Ofrecemos agendas personalizadas con hojas diseñadas específicamente para tu
+            empresa,
+            anillado... <br><br> Desde el diseño de las hojas con tu logotipo y colores corporativos hasta la elección
+            del tipo
+            de encuadernación, nos aseguramos de que cada detalle sea personalizado para ti.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
-        <img src="./assets/images/Logo.png" class="card-img-top" alt="...">
+      <div class="card h-100 card_tam">
+        <img src="./assets/images/products/tarjetas_presentacion.jpg" class="card-img-top img_card" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">TARJETAS DE PRESENTACIÓN</h5>
+          <p class="card-text texto_for">Si necesitas una presentación más detallada de tu empresa nuestras tarjetas de
+            presentación pueden ayudarte a transmitir información adicional, como servicios ofrecidos, detalles de
+            contacto y logotipos. <br> <br> • Puedes personalizar el diseño.
+            <br> <br> • Acabados especiales: barnizado UV, laminado brillante.
+          </p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
-        <img src="./assets/images/Logo.png" class="card-img-top" alt="...">
+      <div class="card h-100 card_tam">
+        <img src="./assets/images/products/cajas_troqueladas.jpg" class="card-img-top img_card" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content.</p>
+          <h5 class="card-title">CAJAS TROQUELADAS Y DISEÑO PERSONALIZADO</h5>
+          <p class="card-text texto_for">• Cajas troqueladas a medida para tus productos y promociones. <br> <br> •
+            Diseños
+            atractivos
+            y originales que reflejan la identidad de tu marca. <br> <br> • Soluciones creativas y profesionales para
+            destacar en el mercado.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
-        <img src="./assets/images/Logo.png" class="card-img-top" alt="...">
+      <div class="card h-100 card_tam">
+        <img src="./assets/images/products/gigantograficas.jpg" class="card-img-top img_card" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">GIGANTOGRAFÍAS</h5>
+          <p class="card-text texto_for"> Solución impresionante para destacar tu marca o mensaje. <br> • Gigantografías
+            a medida
+            con
+            impresiones de gran formato y alta calidad. <br> • Ideal para publicidad exterior, eventos, ferias
+            comerciales y
+            promociones. <br> • Diseños personalizados que capturan la atención de tu público objetivo. <br> •
+            Utilizamos
+            materiales duraderos y resistentes para garantizar resultados excepcionales.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
-        <img src="./assets/images/Logo.png" class="card-img-top" alt="...">
+      <div class="card h-100 card_tam">
+        <img src="./assets/images/products/volantes.jpg" class="card-img-top img_card" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">VOLANTES</h5>
+          <p class="card-text texto_for">Se imprimen en papel de alta calidad. <br><br> Tamaños estándar, como A4, A5 o
+            carta.<br><br>Son ideales para promociones generales, eventos, anuncios de productos o servicios y
+            distribución masiva. <br><br>Acabados especiales, como barnizado UV, laminado brillante o estampado en
+            caliente.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
-        <img src="./assets/images/Logo.png" class="card-img-top" alt="...">
+      <div class="card h-100 card_tam">
+        <img src="./assets/images/products/boligrafos.jpg" class="card-img-top img_card" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">BOLÍGRAFOS SUBLIMADOS</h5>
+          <p class="card-text texto_for">Personalizados con el logo de tu empresa. <br> • Nuestro proceso de sublimación
+            nos
+            permite
+            imprimir con precisión y colores vibrantes directamente en el cuerpo del bolígrafo. <br> • Te permite
+            promocionar
+            tu negocio o como regalos corporativos. <br> • Destaca entre la multitud con un bolígrafo exclusivo que
+            refleje
+            la identidad de tu empresa y deje una impresión duradera.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 card_tam">
+        <img src="./assets/images/products/roll_up.jpg" class="card-img-top img_card" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ROLL UP</h5>
+          <p class="card-text texto_for">Roll up personalizados de alta calidad con diseños exclusivos, impresión de
+            vanguardia y
+            materiales duraderos. Con una variedad de tamaños y precios competitivos, brindamos soluciones impactantes y
+            fáciles de montar para promociones, eventos y exhibiciones. Atención al cliente personalizada y entrega
+            rápida son parte de nuestro compromiso</p>
         </div>
       </div>
     </div>

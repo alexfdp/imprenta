@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AutenticacionService } from './shared/servicios/autenticacion.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +9,7 @@ import { AutenticacionService } from './shared/servicios/autenticacion.service';
 })
 export class AppComponent {
   title = 'proyecto_imprenta';
-
+  
   constructor(private loginAuth: AutenticacionService) {
   }
 

@@ -1,0 +1,55 @@
+div.contenedor {
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "content content side"
+        "foot foot foot";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto 30px;
+}
+
+div.titulo {
+    grid-area: head;
+    padding: 10px;
+}
+
+div.contenido {
+    grid-area: content;
+    max-width: 68vh;
+    width: auto;
+    margin-right: 5px;
+}
+
+div.aside_rigth {
+    min-width: 30vh;
+    grid-area: side;
+    margin-left: 5px;
+}
+
+div.pie_web {
+    grid-area: foot;
+}
+
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-form-field.rango_fecha {
+    padding: 0;
+    margin-right: 30px;
+}
+
+.imagen_card {
+    object-fit: contain;
+}
+
+.card_pie {
+    max-width: 600px;
+    max-height: 300px;
+}
+
+ngx-charts-bar-vertical.card_bar {
+    max-width: 40%;
+    max-height: 300;
+}

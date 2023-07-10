@@ -13,6 +13,7 @@ import { admin_pagesRoutingModule } from './admin_pages-routing.module';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { VentasComponent } from './pages/ventas/ventas.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
@@ -21,6 +22,9 @@ import { InventarioComponent } from './pages/inventario/inventario.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,12 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
     FormsModule,
     ReactiveFormsModule,
     admin_pagesRoutingModule,
+    NgxChartsModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    // BrowserAnimationsModule,
     MatIconModule,
     MatTableModule,
     MatToolbarModule,

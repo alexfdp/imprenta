@@ -1,1 +1,120 @@
-<p>analisis works!</p>
+<div class="contenedor">
+
+    <div class="titulo">
+        <mat-toolbar class="toolbar_app toolbar_custo">
+            <div>Datos de análisis</div>
+
+            <span class="example-spacer"></span>
+
+            <mat-form-field class="rango_fecha" class="example-form-field">
+                <mat-date-range-input [formGroup]="campaignOne" [rangePicker]="campaignOnePicker"
+                    [comparisonStart]="campaignTwo.value.start" [comparisonEnd]="campaignTwo.value.end">
+                    <input matStartDate placeholder="Start date" formControlName="start">
+                    <input matEndDate placeholder="End date" formControlName="end">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+                <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+            </mat-form-field>
+
+            <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+                <mat-button-toggle value="red">Personalizado</mat-button-toggle>
+                <mat-button-toggle value="green" checked="true">Hoy</mat-button-toggle>
+                <mat-button-toggle value="blue">Últimos 7 días</mat-button-toggle>
+                <mat-button-toggle value="blue">Últimos 30 días</mat-button-toggle>
+                <mat-button-toggle value="blue">Este mes</mat-button-toggle>
+            </mat-button-toggle-group>
+
+        </mat-toolbar>
+    </div>
+
+    <div class="contendio">
+        <div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <mat-icon>people</mat-icon>
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="graficos">
+            <div fxLayout="row" fxLayoutAlign="space-between">
+                <div fxFlex="54.5" class="card border-secondary mb-3">
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Secondary card title</h5>
+                        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="colorScheme" [results]="single"
+                            [gradient]="gradient" (select)="onSelect($event)" (activate)="onActivate($event)"
+                            (deactivate)="onDeactivate($event)">
+                        </ngx-charts-advanced-pie-chart>
+                    </div>
+                </div>
+                <div fxFlex="44.5" class="card border-secondary mb-3">
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Secondary card title</h5>
+                        <ngx-charts-bar-vertical [view]="view2" [scheme]="colorSchemeBar" [results]="single2"
+                            [gradient]="gradient2" [xAxis]="showXAxis2" [yAxis]="showYAxis2" [legend]="showLegend2"
+                            [showXAxisLabel]="showXAxisLabel2" [showYAxisLabel]="showYAxisLabel2"
+                            [xAxisLabel]="xAxisLabel2" [yAxisLabel]="yAxisLabel2" (select)="onSelect2($event)">
+                        </ngx-charts-bar-vertical>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-body text-secondary contenido_line">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <ngx-charts-line-chart [view]="view3" [scheme]="colorScheme3" [legend]="legend3"
+                        [showXAxisLabel]="showXAxisLabel3" [showYAxisLabel]="showYAxisLabel3" [xAxis]="xAxis3"
+                        [yAxis]="yAxis3" [xAxisLabel]="xAxisLabel3" [yAxisLabel]="yAxisLabel3" [timeline]="timeline3"
+                        [results]="multi3" (select)="onSelect($event)" (activate)="onActivate($event)"
+                        (deactivate)="onDeactivate($event)">
+                    </ngx-charts-line-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aside_rigth">
+        <div class="card border-secondary mb-3">
+            <div class="card-body text-secondary">
+                <h5 class="card-title">Secondary card title</h5>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <h2 fxFlex="44.5">$1000</h2>
+                    <img fxFlex="44.5" class="imagen_card" src="./assets/images/artboard.png" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card border-secondary mb-3">
+            <ul class="list-group">
+                <li class="list-group-item">A disabled item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+            </ul>
+        </div>
+    </div>
+    <div class="pie_web">
+        Pie de página
+    </div>
+</div>

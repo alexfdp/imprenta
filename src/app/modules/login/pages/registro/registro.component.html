@@ -1,10 +1,66 @@
-<div class="col-12">Registro de cuenta</div>
+<div class="principal">
+  <div class="contenedor_reg">
+    <div class="contenedor_form">
+      <div class="titulo">
+        <h3>Registarse</h3>
+      </div>
+      <img src="assets/images/logo_margraf_nombre.jpg" alt="logo-empresa" class="logo-empresa">
+      <form class="formulario_reg" [formGroup]="myFormReg"
+      (ngSubmit)="registrar()">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="nombre" class="form-control" id="floatingInput" placeholder="Nombre"
+            id="exampleFormControlInput1">
+          <label for="floatingInput" style="font-size: 14px;" class="mb-3">
+            Ingrese su nombre</label>
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Nombre necesario.
+          </div>
+        </div>
 
-<div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="apellido" class="form-control" id="floatingInput" placeholder="Apellido"
+            id="exampleFormControlInput1">
+          <label for="floatingInput" style="font-size: 14px;" class="mb-3">
+            Ingrese su apellido</label>
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Apellido necesario.
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" formControlName="correo" class="form-control" id="floatingInput"
+            placeholder="name@example.com" id="exampleFormControlInput1">
+          <label for="floatingInput" style="font-size: 14px;" class="mb-3">
+            Ingrese su correo</label>
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Correo necesario.
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="usuario" class="form-control" id="floatingInput" placeholder="Usuario"
+            id="exampleFormControlInput1">
+          <label for="floatingInput" style="font-size: 14px;" class="mb-3">
+            Ingrese su usuario</label>
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Usuario necesario.
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input id="campo-password-valitaion" formControlName="contrasena" type="password"
+            class="form-control" placeholder="Password">
+          <label for="floatingPassword" style="font-size: 14px;"><i class="bi bi-lock-fill"></i>
+            &nbsp;Ingrese su contraseña</label>
+          <div class="position-absolute top-50 end-0 translate-middle-y">
+            <button onclick="functionVisibilidadPassword()" type="button" class="configuracion-boton-icon"><i
+                id="icono-eye" class="bi bi-eye-slash-fill"></i></button>
+          </div>
+        </div>
+
+        <button id="btn_complete_reg btn-success">Registrarse</button>
+      </form>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
+
+</div>

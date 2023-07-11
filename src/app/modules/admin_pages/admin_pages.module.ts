@@ -13,18 +13,20 @@ import { admin_pagesRoutingModule } from './admin_pages-routing.module';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { VentasComponent } from './pages/ventas/ventas.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { AnalisisComponent } from './pages/analisis/analisis.component';
 import { InventarioComponent } from './pages/inventario/inventario.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { FacturaComponent } from './pages/factura/factura.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -51,9 +53,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatTableModule,
     MatToolbarModule,
     MatFormFieldModule,
+    MatInputModule,
     MatCardModule,
     MatDividerModule,
     MatSidenavModule,
+    MatSortModule,
     MatPaginatorModule,
     MatButtonModule,
     FlexLayoutModule

@@ -1,0 +1,68 @@
+.principal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_reg {
+    padding: 20px 20px;
+    background-color: rgba(25, 4, 210, 0.5);
+    max-width: 500px;
+    margin: 10px;
+}
+
+.logo-empresa {
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+div.titulo h3 {
+    color: black;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.contenedor_form {
+    border-radius: 10px;
+    padding: 50px 50px;
+    background-color: white;
+}
+
+.formulario_reg {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_form form input {
+    width: 100%;
+    border: none;
+    background: #F2F2F2;
+    font-size: 14px;
+    outline: none;
+}
+
+.configuracion-boton-icon {
+    border: none;
+    background-color: transparent;
+    font-size: 18px !important;
+    color: black !important;
+    margin-top: 0 !important;
+    padding: 0px 10px !important;
+    background: none !important;
+}
+
+.contenedor_form form button {
+    width: 100%;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    background: #1D1783;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}

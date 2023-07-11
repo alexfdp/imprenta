@@ -1,1 +1,21 @@
-<p>factura works!</p>
+<div>Lista de facturas</div>
+<mat-card class="carta_top">
+    <div class="linea_1">
+        <div class="cont_date">
+            <mat-form-field class="example-form-field">
+                <mat-date-range-input [formGroup]="campaignOne" [rangePicker]="campaignOnePicker">
+                    <input matStartDate placeholder="Start date" formControlName="start">
+                    <input matEndDate placeholder="End date" formControlName="end">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+                <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button disabled>Disabled</button>
+    </div>
+    <div>
+        <h3>Total $</h3>
+    </div>
+</mat-card>
+<br>

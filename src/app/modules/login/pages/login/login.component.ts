@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(loginDtomt: Login) {
-    var a = this.loginAuth.logIn(loginDtomt).subscribe({
+    this.loginAuth.logIn(loginDtomt).subscribe({
       next: (authTokenD) => { localStorage.setItem('token', authTokenD.token); this.logI(); },
       error: (response: any) => {
         alert("Usuario o contraseña incorrecto");

@@ -1,9 +1,9 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { AdminService } from '../../services/admin.service';
 import { User } from 'src/app/modelos/User';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatSort, MatSortModule, Sort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort, Sort } from '@angular/material/sort';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 
 export interface PeriodicElement {
@@ -18,13 +18,15 @@ export interface PeriodicElement {
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.scss']
 })
-export class UsuariosComponent {
+export class UsuariosComponent implements AfterViewInit {
   usuarios!: MatTableDataSource<User>;
-  displayedColumnsUser: string[] = ['ID', 'Nombre', 'Cedula', 'Telefono', 'Direccion', 'FechaNacimiento', 'Correo', 'Usuario', 'Rol'];
+  displayedColumnsUser: string[] = ['ID', 'Nombre', 'Correo', 'Usuario', 'Rol'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private adminService: AdminService, private _liveAnnouncer: LiveAnnouncer) { }
+
+  ngAfterViewInit(): void { }
 
   ngOnInit(): void {
     this.get();
@@ -57,10 +59,6 @@ export class UsuariosComponent {
   }
 
   announceSortChange(sortState: Sort) {
-    // This example uses English messages. If your application supports
-    // multiple language, you would internationalize these strings.
-    // Furthermore, you can customize the message to add additional
-    // details about the values being sorted.
     if (sortState.direction) {
       this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
     } else {

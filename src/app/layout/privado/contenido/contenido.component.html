@@ -18,19 +18,19 @@
             <mat-icon>description</mat-icon>
             <span>Facturas</span>
         </button>
-        <button [routerLink]="['/admin/inventario']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+        <!-- <button [routerLink]="['/admin/inventario']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
             <mat-icon>store</mat-icon>
             <span>Inventario</span>
         </button>
         <button [routerLink]="['/admin/pedidos']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
             <mat-icon>store</mat-icon>
             <span>Pedidos</span>
-        </button>
+        </button> -->
         <button [routerLink]="['/admin/analisis']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
             <mat-icon>trending_up</mat-icon>
             <span>Análisis</span>
         </button>
-        <button [routerLink]="['/admin/clientes']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+        <!-- <button [routerLink]="['/admin/clientes']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
             <mat-icon>people</mat-icon>
             <span>Clientes</span>
         </button>
@@ -41,7 +41,7 @@
         <button mat-button class="menu-button">
             <mat-icon>info</mat-icon>
             <span>Tarifas</span>
-        </button>
+        </button> -->
 
         <mat-divider></mat-divider>
 
@@ -52,9 +52,9 @@
 
     </mat-sidenav>
 
-    <mat-sidenav-content>
-        <div class="content mat-elevation-z8">
-            <router-outlet></router-outlet>
-        </div>
+    <mat-sidenav-content class="content">
+        <!-- <div class="content mat-elevation-z8"> -->
+        <router-outlet></router-outlet>
+        <!-- </div> -->
     </mat-sidenav-content>
 </mat-sidenav-container>

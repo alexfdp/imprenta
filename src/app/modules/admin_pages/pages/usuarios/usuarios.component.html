@@ -4,39 +4,41 @@
       <mat-label>Filtro</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Juan" #input>
     </mat-form-field>
-    <table mat-table [dataSource]="usuarios" matSort class="mat-elevation-z8 demo-table">
+
+    <table mat-table [dataSource]="usuarios" matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8 demo-table">
+      
       <ng-container matColumnDef="ID">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"> No. </th>
         <td mat-cell *matCellDef="let element"> {{element.idpp_user}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Nombre">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Nombre </th>
         <td mat-cell *matCellDef="let element"> {{element.nombre}} {{element.apellido}}</td>
       </ng-container>
 
       <ng-container matColumnDef="Cedula">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cédula </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Cédula </th>
         <td mat-cell *matCellDef="let element"> {{element.cedula}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Telefono">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Teléfono </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"> Teléfono </th>
         <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Direccion">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dirección </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Dirección </th>
         <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
       </ng-container>
 
       <ng-container matColumnDef="FechaNacimiento">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de Nacimiento </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Fecha de Nacimiento </th>
         <td mat-cell *matCellDef="let element"> {{element.fecha_nacimiento}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Correo">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Correo </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Correo </th>
         <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
       </ng-container>
 
@@ -51,15 +53,50 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumnsUser"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumnsUser;"></tr>
+      <tr mat-row (click)="clickUsuario=row" *matRowDef="let row; columns: displayedColumnsUser;"></tr>
       <tr class="mat-row" *matNoDataRow>
         <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
       </tr>
+
     </table>
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
   </div>
 
   <div>
+    <div>
+      <h3>
+        Usuario Seleccionado
+      </h3>
+    </div>
 
+    <div *ngIf="clickUsuario.idpp_user==0">
+      Clicked rows will be logged here
+    </div>
+
+    <div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+
+    </div>
+
+    <ul>
+      <li *ngIf="clickUsuario.idpp_user!=0">
+        Clicked on {{clickUsuario.nombre}}
+      </li>
+    </ul>
   </div>
 </div>

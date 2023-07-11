@@ -19,10 +19,11 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private loginAuth: AutenticacionService,
     private routerprd: Router) {
+    const user = sessionStorage.getItem('token');
+    if (user) this.routerprd.navigate(['/admin/users']);
   }
 
   login(loginDtomt: Login) {
-
     var a = this.loginAuth.logIn(loginDtomt).subscribe({
       next: (authTokenD) => { localStorage.setItem('token', authTokenD.token); this.logI(); },
       error: (response: any) => {
@@ -30,8 +31,6 @@ export class LoginComponent implements OnInit {
         console.log("error: " + response.error);
       }
     });
-
-
   }
 
   ngOnInit(): void {
@@ -51,14 +50,12 @@ export class LoginComponent implements OnInit {
   }
 
   public submitFormulario() {
-
     if (this.myForm.invalid) {
       Object.values(this.myForm.controls).forEach(control => {
         control.markAllAsTouched();
       });
       return;
     }
-
     this.loginDto.usuario = this.myForm.value.usuario;
     this.loginDto.contrasena = this.myForm.value.password;
     this.login(this.loginDto);

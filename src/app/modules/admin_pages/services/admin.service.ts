@@ -4,19 +4,34 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from 'src/app/modelos/User';
 import { Router } from '@angular/router';
+import { Empleado } from 'src/app/modelos/Empleado';
+import { Cliente } from 'src/app/modelos/Cliente';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
   datosUsuariosUrl = "Admin/GetUsuarios"
-  constructor(private http: HttpClient,private routerprd:Router) { }
+  datosEmpleadosUrl = "Admin/GetEmpleados"
+  datosClientesUrl = "Admin/GetClientes"
+  constructor(private http: HttpClient, private routerprd: Router) { }
 
   public getUsers() {
     let headers = new HttpHeaders().set('Authorization', 'Bearer Token' + localStorage.getItem("token"));
     return this.http.get<User[]>(`${environment.apiUrl}/${this.datosUsuariosUrl}`, { headers });
   }
-  public regresar(){
+
+  public getEmpleados() {
+    let headers = new HttpHeaders().set('Authorization', 'Bearer Token' + localStorage.getItem("token"));
+    return this.http.get<Empleado[]>(`${environment.apiUrl}/${this.datosEmpleadosUrl}`, { headers });
+  }
+
+  public getClientes() {
+    let headers = new HttpHeaders().set('Authorization', 'Bearer Token' + localStorage.getItem("token"));
+    return this.http.get<Cliente[]>(`${environment.apiUrl}/${this.datosClientesUrl}`, { headers })
+  }
+
+  public regresar() {
     this.routerprd.navigateByUrl("/sinsesion/login");
   }
 }

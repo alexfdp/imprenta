@@ -25,7 +25,12 @@ export class LoginComponent implements OnInit {
 
   login(loginDtomt: Login) {
     this.loginAuth.logIn(loginDtomt).subscribe({
-      next: (authTokenD) => { localStorage.setItem('token', authTokenD.token); this.logI(); },
+      next: (authTokenD) => {
+        localStorage.setItem('token', authTokenD.token);
+        localStorage.setItem('name', authTokenD.name);
+        localStorage.setItem('rol', authTokenD.rol);
+        this.logI();
+      },
       error: (response: any) => {
         alert("Usuario o contraseña incorrecto");
         console.log("error: " + response.error);
@@ -39,7 +44,12 @@ export class LoginComponent implements OnInit {
   }
 
   private logI() {
-    this.routerprd.navigateByUrl("/admin/users");
+    const rol = localStorage.getItem('rol');
+    if (rol == 'Administrador') this.routerprd.navigateByUrl("/admin/users");
+    if (rol == 'Encargado') this.routerprd.navigateByUrl("/encargado/home");
+    if (rol == 'Gerente') this.routerprd.navigateByUrl("/gerente/home");
+    if (rol == 'Empleado') this.routerprd.navigateByUrl("/empleado/home");
+    if (rol == 'Cliente') this.routerprd.navigateByUrl("/cliente/home");
   }
 
   private createMyForm(): FormGroup {

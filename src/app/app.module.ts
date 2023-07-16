@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SesionComponent } from './layout/publico/sesion/sesion.component';
-import { ContenidoComponent } from './layout/privado/contenido/contenido.component';
+import { MenuAdminComponent } from './layout/privado/menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -20,13 +20,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthenticationInterceptor } from './shared/servicios/interceptor';
+import { MenuEncargadoComponent } from './layout/privado/menu-encargado/menu-encargado.component';
+import { MenuGerenteComponent } from './layout/privado/menu-gerente/menu-gerente.component';
+import { MenuEmpleadoComponent } from './layout/privado/menu-empleado/menu-empleado.component';
+import { MenuClienteComponent } from './layout/privado/menu-cliente/menu-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SesionComponent,
-    ContenidoComponent,
+    MenuAdminComponent,
     BienvenidaComponent,
+    MenuEncargadoComponent,
+    MenuGerenteComponent,
+    MenuEmpleadoComponent,
+    MenuClienteComponent,
   ],
   imports: [
     BrowserModule,

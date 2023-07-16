@@ -23,26 +23,27 @@
                     <img src="assets/images/logo_margraf_nombre.jpg" alt="logo-empresa" class="logo-empresa">
                     <h2>Iniciar Sesión</h2>
                     <div class="form-floating mb-3">
-                        <input type="email" formControlName="usuario"
-                            [class.is-invalid]="f.usuario.errors && f.usuario.touched" class="form-control mb-4"
+                        <input type="text" formControlName="usuario"
+                            [class.is-invalid]="f.usuario.errors && f.usuario.touched" class="form-control"
                             id="floatingInput" placeholder="name@example.com" id="exampleFormControlInput1">
                         <label for="floatingInput" style="font-size: 14px;" class="mb-3"> <i
                                 class="bi bi-envelope-fill"></i>
-                            &nbsp;Ingrese su correo</label>
+                            &nbsp;Ingrese su usuario</label>
                         <div id="validationServer03Feedback" class="invalid-feedback">
-                            Por favor ingrese el correo.
+                            Por favor ingrese el usuario.
                         </div>
                     </div>
-                    
+
                     <div class="form-floating position-relative">
                         <input id="campo-password-valitaion" formControlName="password" type="password"
-                            class="form-control" placeholder="Password">
+                            [class.is-invalid]="f.password.errors && f.password.touched" class="form-control"
+                            placeholder="Password">
                         <label for="floatingPassword" style="font-size: 14px;"><i class="bi bi-lock-fill"></i>
                             &nbsp;Ingrese
                             su contraseña</label>
-                            <div id="validationServer03Feedback" class="invalid-feedback">
-                                Por favor ingrese contraseña.
-                            </div>
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            Por favor ingrese contraseña.
+                        </div>
                         <div class="position-absolute top-50 end-0 translate-middle-y">
                             <button onclick="functionVisibilidadPassword()" type="button"
                                 class="configuracion-boton-icon"><i id="icono-eye"

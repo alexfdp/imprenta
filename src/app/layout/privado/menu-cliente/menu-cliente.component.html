@@ -1,0 +1,78 @@
+<mat-toolbar class="example-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h4 class="example-app-name">MARGRAF</h4>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #sidenav [mode]="'over'">
+
+        <h4 class="name">{{nombreUser}}</h4>
+        <p class="designation">Cliente</p>
+
+        <mat-divider></mat-divider>
+        <button [routerLink]="['/cliente/home']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Inicio</span>
+        </button>
+        <!-- 
+        <button [routerLink]="['/admin/empleados']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon>supervisor_account</mat-icon>
+            <span>Empleados</span>
+        </button>
+
+        <button [routerLink]="['/admin/clientes']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon>groups</mat-icon>
+            <span>Clientes</span>
+        </button>
+
+        <button [routerLink]="['/admin/proveedores']" [routerLinkActive]="'optionActive'" mat-button
+            class="menu-button">
+            <mat-icon fontIcon="shelves"></mat-icon>
+            <span>Proveedores</span>
+        </button>
+
+        <button [routerLink]="['/admin/ventas']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon fontIcon="shopping_cart_checkout"></mat-icon>
+            <span>Ventas</span>
+        </button>
+
+        <button [routerLink]="['/admin/analisis']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon>trending_up</mat-icon>
+            <span>Análisis</span>
+        </button>
+
+        <button [routerLink]="['/admin/facturas']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon fontIcon="receipt_long"></mat-icon>
+            <span>Facturas</span>
+        </button>
+
+        <button [routerLink]="['/admin/materiales']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon fontIcon="inventory"></mat-icon>
+            <span>Materiales</span>
+        </button>
+
+        <button [routerLink]="['/admin/productos']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon fontIcon="conveyor_belt"></mat-icon>
+            <span>Productos</span>
+        </button>
+
+        <button [routerLink]="['/admin/pedidos']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
+            <mat-icon fontIcon="assignment_add"></mat-icon>
+            <span>Pedidos</span>
+        </button> -->
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Cerrar Sesión</span>
+        </button>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+        <!-- <div class="content mat-elevation-z8"> -->
+        <router-outlet></router-outlet>
+        <!-- </div> -->
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -23,11 +23,16 @@ export class AutenticacionService {
   public logIn(user: Login): Observable<AuthToken> {
     return this.http.post<AuthToken>(`${environment.apiUrl}/${this.loginUrl}`, user);
   }
+  public logOut(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('name');
+    localStorage.removeItem('rol');
+  }
 
-  public cargar( archivos: string[]){
-    for(let archivo of archivos){
+  public cargar(archivos: string[]) {
+    for (let archivo of archivos) {
       let script = document.createElement("script");
-      script.src = './assets/js/'+archivo+'.js';
+      script.src = './assets/js/' + archivo + '.js';
       let body = document.getElementsByTagName('body')[0];
       body.appendChild(script);
     }

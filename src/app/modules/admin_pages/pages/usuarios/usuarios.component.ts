@@ -20,7 +20,7 @@ export interface PeriodicElement {
 })
 export class UsuariosComponent implements AfterViewInit {
   usuarios!: MatTableDataSource<User>;
-  displayedColumnsUser: string[] = ['ID', 'Nombre', 'Correo', 'Usuario', 'Rol'];
+  displayedColumnsUser: string[] = ['ID', 'Nombre', 'Correo', 'Usuario', 'Rol', 'Acciones'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 

@@ -4,18 +4,24 @@ import { UsuariosComponent } from "./pages/usuarios/usuarios.component";
 import { VentasComponent } from "./pages/ventas/ventas.component";
 import { PedidosComponent } from "./pages/pedidos/pedidos.component";
 import { FacturaComponent } from "./pages/factura/factura.component";
-import { InventarioComponent } from "./pages/inventario/inventario.component";
 import { AnalisisComponent } from "./pages/analisis/analisis.component";
 import { ClientesComponent } from "./pages/clientes/clientes.component";
+import { ProveedoresComponent } from "./pages/proveedores/proveedores.component";
+import { MaterialesComponent } from "./pages/materiales/materiales.component";
+import { EmpleadosComponent } from "./pages/empleados/empleados.component";
+import { ProductosComponent } from "./pages/productos/productos.component";
 const rutas: Routes = [{
     path: '', children: [
         { path: 'users', component: UsuariosComponent },
-        { path: 'venta', component: VentasComponent },
+        { path: 'ventas', component: VentasComponent },
         { path: 'pedidos', component: PedidosComponent },
         { path: 'facturas', component: FacturaComponent },
-        { path: 'inventario', component: InventarioComponent },
         { path: 'analisis', component: AnalisisComponent },
-        { path: 'clientes', component: ClientesComponent }
+        { path: 'clientes', component: ClientesComponent },
+        { path: 'proveedores', component: ProveedoresComponent },
+        { path: 'materiales', component: MaterialesComponent },
+        { path: 'empleados', component: EmpleadosComponent },
+        { path: 'productos', component: ProductosComponent }
     ]
 }];
 @NgModule({

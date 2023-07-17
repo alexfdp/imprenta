@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { GerentePagesRoutingModule } from './gerente-pages-routing.module';
 import { HomeGerenteComponent } from './pages/home-gerente/home-gerente.component';
 import { UserComponent } from './pages/user/user.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { UserComponent } from './pages/user/user.component';
   ],
   imports: [
     CommonModule,
-    GerentePagesRoutingModule
+    GerentePagesRoutingModule,
+    SharedModule,
   ]
 })
 export class GerentePagesModule { }

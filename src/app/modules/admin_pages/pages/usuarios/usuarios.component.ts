@@ -2,16 +2,9 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
 import { User } from 'src/app/modelos/User';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort, Sort } from '@angular/material/sort';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
 
 @Component({
   selector: 'app-usuarios',
@@ -56,14 +49,6 @@ export class UsuariosComponent implements AfterViewInit {
         this.adminService.regresar();
       }
     })
-  }
-
-  announceSortChange(sortState: Sort) {
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-    } else {
-      this._liveAnnouncer.announce('Sorting cleared');
-    }
   }
 
   clickUsuario = new User();

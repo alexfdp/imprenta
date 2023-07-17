@@ -5,11 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { clienteviewRoutingModule } from './cliente-routing.module';
 import { CommonModule } from '@angular/common';
 import { HomeClienteComponent } from './pages/home-cliente/home-cliente.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { CotizarComponent } from './pages/cotizar/cotizar.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
     ClienteViewComponent,
-    HomeClienteComponent
+    HomeClienteComponent,
+    CotizarComponent,
+    PedidosComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +22,7 @@ import { HomeClienteComponent } from './pages/home-cliente/home-cliente.componen
     // ReactiveFormsModule,
     clienteviewRoutingModule,
     RouterModule,
-    
+    SharedModule
   ],providers: []
 })
 export class ClienteModule { }

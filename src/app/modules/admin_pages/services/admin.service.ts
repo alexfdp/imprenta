@@ -6,6 +6,7 @@ import { User } from 'src/app/modelos/User';
 import { Router } from '@angular/router';
 import { Empleado } from 'src/app/modelos/Empleado';
 import { Cliente } from 'src/app/modelos/Cliente';
+import { Producto } from 'src/app/modelos/Producto';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,8 @@ export class AdminService {
   datosUsuariosUrl = "Admin/GetUsuarios"
   datosEmpleadosUrl = "Admin/GetEmpleados"
   datosClientesUrl = "Admin/GetClientes"
+  datosProductosUrl = "Admin/GetProductos"
+  AddProductoUrl = "Admin/AddProducto"
   constructor(private http: HttpClient, private routerprd: Router) { }
 
   public getUsers() {
@@ -28,7 +31,17 @@ export class AdminService {
 
   public getClientes() {
     let headers = new HttpHeaders().set('Authorization', 'Bearer Token' + localStorage.getItem("token"));
-    return this.http.get<Cliente[]>(`${environment.apiUrl}/${this.datosClientesUrl}`, { headers })
+    return this.http.get<Cliente[]>(`${environment.apiUrl}/${this.datosClientesUrl}`, { headers });
+  }
+
+  public getProductos() {
+    let headers = new HttpHeaders().set('Authorization', 'Bearer Token' + localStorage.getItem("token"));
+    return this.http.get<Producto[]>(`${environment.apiUrl}/${this.datosProductosUrl}`, { headers })
+  }
+
+  public addProducto(product: Producto): Observable<boolean> {
+    let headers = new HttpHeaders().set('Authorization', 'Bearer Token' + localStorage.getItem("token"));
+    return this.http.post<boolean>(`${environment.apiUrl}/${this.AddProductoUrl}`, product, { headers });
   }
 
   public regresar() {

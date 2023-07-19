@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -36,6 +37,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatSortModule,
     MatTooltipModule,
     MatPaginatorModule,
+    MatDialogModule,
   ],
   exports: [
     MatButtonModule,
@@ -53,6 +55,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatSortModule,
     MatTooltipModule,
     MatPaginatorModule,
+    MatDialogModule,
   ]
 })
 export class SharedModule { }

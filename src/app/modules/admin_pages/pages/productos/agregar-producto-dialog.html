@@ -1,0 +1,31 @@
+<div mat-dialog-content class="row g-3">
+
+    <div class="col-12">
+        <p>Ingresar Nuevo Producto</p>
+    </div>
+
+    <div class="col-12">
+        <label class="form-label">Imagen del producto</label>
+        <input accept="image/png,image/jpeg,image/jpg" (change)="capturarFile($event)" class="form-control" type="file" id="formFile">
+    </div>
+    <!-- <br> -->
+    <div class="col-12">
+        <label class="form-label">Nombre</label>
+        <input type="text" matInput [(ngModel)]="data.nombre" class="form-control" placeholder="Ex. Libro">
+    </div>
+    <!-- <br> -->
+    <div class="col-12">
+        <label class="form-label">Precio base</label>
+        <input type="number" matInput [(ngModel)]="data.precio_base" class="form-control" placeholder="Ex. 0.5">
+    </div>
+    <!-- <br> -->
+    <div class="col-12">
+        <label class="form-label">Descripcion</label>
+        <input type="text" matInput [(ngModel)]="data.descripcion" class="form-control" placeholder="Ex. Producto personalizado con su logo">
+    </div>
+
+</div>
+<div mat-dialog-actions class="col-12">
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

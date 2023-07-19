@@ -10,7 +10,5 @@ import { MatDrawerMode } from '@angular/material/sidenav';
 })
 export class MenuAdminComponent {
   nombreUser = localStorage.getItem('name');
-  constructor() {
-    console.log("nombre: " + this.nombreUser);
-  }
+  constructor() { }
 }

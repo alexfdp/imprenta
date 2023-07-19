@@ -1,7 +1,7 @@
-export class Productos {
+export class Producto {
     idpp_producto = 0
     nombre = ''
-    decripcion = ''
+    descripcion = ''
     imagen = ''
     precio_base = 0.0
 }

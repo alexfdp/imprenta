@@ -33,6 +33,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "sweetalert2"
+            ],
             "outputPath": "dist/proyecto_imprenta",
             "index": "src/index.html",
             "main": "src/main.ts",

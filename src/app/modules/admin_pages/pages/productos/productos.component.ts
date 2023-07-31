@@ -10,11 +10,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { DomSanitizer } from '@angular/platform-browser';
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import Swal from 'sweetalert2';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-productos',
@@ -29,8 +26,6 @@ export class ProductosComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  animal!: string;
-  name!: string;
   productoNuevo!: Producto;
 
   constructor(private adminService: AdminService, public dialog: MatDialog) { }
@@ -73,6 +68,11 @@ export class ProductosComponent {
     this.adminService.addProducto(product).subscribe({
       next: (data) => {
         if (data) {
+          Swal.fire({
+            text: 'Elemento guardado correctamente',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          });
           console.log("Guardado correctamente");
           this.get();
         }
@@ -95,16 +95,18 @@ export class ProductosComponent {
       }
     });
   }
-
   clickProducto = new Producto();
 }
 
+
+
+// comienzo de otro componente para llenar datos de un nuevo producto
 
 @Component({
   selector: 'agregar-producto-dialog',
   templateUrl: 'agregar-producto-dialog.html',
   standalone: true,
-  imports: [MatDialogModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
+  imports: [CommonModule, MatDialogModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
 })
 export class AgregarProductoDialog {
   constructor(

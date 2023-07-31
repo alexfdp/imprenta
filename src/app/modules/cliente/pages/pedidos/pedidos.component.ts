@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pedidos',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./pedidos.component.scss']
 })
 export class PedidosComponent {
-
+// @Input() val:any;
 }

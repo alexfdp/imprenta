@@ -1,31 +1,54 @@
 <div mat-dialog-content class="row g-3">
+    <form #forma="ngForm">
+        <div class="col-12">
+            <p>Ingresar Nuevo Producto</p>
+        </div>
 
-    <div class="col-12">
-        <p>Ingresar Nuevo Producto</p>
-    </div>
+        <div class="col-12">
+            <label class="form-label">Imagen del producto</label>
+            <input accept="image/png,image/jpeg,image/jpg" (change)="capturarFile($event)" class="form-control"
+                type="file" id="formFile">
+        </div>
+        <!-- <br> -->
+        <div class="col-12">
+            <label class="form-label">Nombre</label>
+            <input type="text" placeholder="Ex. Libro" #name="ngModel" matInput [(ngModel)]="data.nombre" name="name"
+                class="form-control" minlength="4" required
+                [ngClass]="{'is-valid': !name.invalid, 'is-invalid': name.invalid}">
+            <div class="invalid-feedback" *ngIf="name.invalid && (name.dirty || name.touched)">
+                <div *ngIf="name.errors?.['required']">
+                    Introduzca el nombre
+                </div>
+            </div>
+        </div>
+        <!-- <br> -->
+        <div class="col-12">
+            <label class="form-label">Precio base</label>
+            <input type="number" #precio="ngModel" matInput [(ngModel)]="data.precio_base" class="form-control"
+                name="precio" [min]="1" required placeholder="Ex. 0.5"
+                [ngClass]="{'is-valid': !precio.invalid, 'is-invalid': precio.invalid}">
+            <div class="invalid-feedback" *ngIf="precio.invalid && (precio.dirty || precio.touched)">
+                <div *ngIf="precio.errors?.['required']">
+                    Introduzca el nombre
+                </div>
+            </div>
+        </div>
+        <!-- <br> -->
+        <div class="col-12">
+            <label class="form-label">Descripcion</label>
+            <input type="text" #descripcion="ngModel" matInput [(ngModel)]="data.descripcion" class="form-control"
+                name="descripcion" minlength="5" required placeholder="Ex. Producto personalizado con su logo"
+                [ngClass]="{'is-valid': !descripcion.invalid, 'is-invalid': descripcion.invalid}">
+            <div class="invalid-feedback" *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched)">
+                <div *ngIf="descripcion.errors?.['required']">
+                    Introduzca el nombre
+                </div>
+            </div>
+        </div>
+        <div mat-dialog-actions class="col-12">
+            <button mat-button (click)="onNoClick()">Cancel</button>
+            <button mat-button [mat-dialog-close]="data" [disabled]="!forma.valid" cdkFocusInitial>Ok</button>
+        </div>
 
-    <div class="col-12">
-        <label class="form-label">Imagen del producto</label>
-        <input accept="image/png,image/jpeg,image/jpg" (change)="capturarFile($event)" class="form-control" type="file" id="formFile">
-    </div>
-    <!-- <br> -->
-    <div class="col-12">
-        <label class="form-label">Nombre</label>
-        <input type="text" matInput [(ngModel)]="data.nombre" class="form-control" placeholder="Ex. Libro">
-    </div>
-    <!-- <br> -->
-    <div class="col-12">
-        <label class="form-label">Precio base</label>
-        <input type="number" matInput [(ngModel)]="data.precio_base" class="form-control" placeholder="Ex. 0.5">
-    </div>
-    <!-- <br> -->
-    <div class="col-12">
-        <label class="form-label">Descripcion</label>
-        <input type="text" matInput [(ngModel)]="data.descripcion" class="form-control" placeholder="Ex. Producto personalizado con su logo">
-    </div>
-
-</div>
-<div mat-dialog-actions class="col-12">
-    <button mat-button (click)="onNoClick()">Cancel</button>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+    </form>
 </div>

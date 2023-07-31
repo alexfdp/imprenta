@@ -16,6 +16,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatTooltipModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatBadgeModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
@@ -56,6 +60,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatTooltipModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatBadgeModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

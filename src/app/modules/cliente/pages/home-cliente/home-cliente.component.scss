@@ -1,0 +1,42 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar_custo {
+    // max-width:  calc(100vw - 10%);
+    border-radius: 10px;
+    // position: fixed;
+    // z-index: 1;
+    margin: 15px 0;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.example-card {
+    max-width: 350px;
+}
+
+.boton {
+    background-color: #1956EF;
+    color: #ffffff;
+}
+
+mat-card img {
+    max-height: 220px;
+    object-fit: contain;
+}
+
+.btn-cart {
+    align-items: end;
+}
+
+.caja_tabla {
+    margin: 15px 5%;
+}
+
+.cartas {
+    margin: 15px 0;
+}

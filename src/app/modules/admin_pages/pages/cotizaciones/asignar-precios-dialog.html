@@ -1,0 +1,67 @@
+<div mat-dialog-content>
+    <div class="container">
+        <form class="row g-3" #forma="ngForm">
+
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Nombre del cliente</label>
+                <input type="text" class="form-control" #name="ngModel" matInput [(ngModel)]="data.nombre"
+                    [textContent]="data.nombre" name="name" disabled>
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Producto</label>
+                <select class="form-select" (change)="selectProd($event)" [disabled]="!valido">
+                    <ng-container *ngFor="let prod of products">
+                        <option *ngIf="prod.estado!='val'" [value]="prod.producto_id">
+                            {{prod.nombre}}
+                        </option>
+                    </ng-container>
+                </select>
+            </div>
+            <div class="row g-3" *ngIf="valido">
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Detalles</label>
+                    <input type="text" class="form-control" #detalles="ngModel" matInput [(ngModel)]="pro.detalles"
+                        [textContent]="pro.detalles" name="detalles" disabled>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" #cantidad="ngModel" matInput [(ngModel)]="pro.cantidad"
+                        [textContent]="pro.cantidad" name="cantidad" disabled>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="inputZip" class="form-label">Precio Unitario</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" (keyup)="ingresaValor($event)" (change)="ingresaValor($event)"
+                            class="form-control" #precio_unitario="ngModel" matInput [(ngModel)]="pro.precio_unitario"
+                            name="precio_unitario" min="1" required
+                            [ngClass]="{'is-valid': !precio_unitario.invalid, 'is-invalid': precio_unitario.invalid}">
+                        <div class="invalid-feedback"
+                            *ngIf="precio_unitario.invalid && (precio_unitario.dirty || precio_unitario.touched)">
+                            <div *ngIf="precio_unitario.errors?.['required']">
+                                Introduzca el precio
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="inputj" class="form-label">Subtotal producto</label>
+                    <input type="number" class="form-control" #subtotal="ngModel" matInput [(ngModel)]="subtotalProduct"
+                        [textContent]="subtotalProduct" name="subtotalProduct" disabled>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" [disabled]="!forma.valid" (click)="guardarData()">Guardar datos
+                        producto</button>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success" [disabled]="valido" [mat-dialog-close]="data">Guardar Cambios</button>
+            </div>
+        </form>
+    </div>
+</div>

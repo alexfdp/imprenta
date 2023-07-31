@@ -45,8 +45,10 @@
                 <ng-container matColumnDef="Acciones">
                     <th mat-header-cell *matHeaderCellDef> Acciones </th>
                     <td mat-cell *matCellDef="let element">
-                        <mat-icon matTooltip="Editar" fontIcon="edit" class="iconBtn edit"></mat-icon>
-                        <mat-icon matTooltip="Eliminar" fontIcon="delete" class="iconBtn delete"></mat-icon>
+                        <button mat-mini-fab color="primary" matTooltip="Editar" class="iconBtn"><mat-icon
+                                fontIcon="edit" class="edit"></mat-icon></button>
+                        <button mat-mini-fab color="warn" matTooltip="Eliminar" class="iconBtn"><mat-icon
+                                fontIcon="delete" class="delete"></mat-icon></button>
                     </td>
                 </ng-container>
 

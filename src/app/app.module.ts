@@ -17,6 +17,7 @@ import { MenuGerenteComponent } from './layout/privado/menu-gerente/menu-gerente
 import { MenuEmpleadoComponent } from './layout/privado/menu-empleado/menu-empleado.component';
 import { MenuClienteComponent } from './layout/privado/menu-cliente/menu-cliente.component';
 import { SharedModule } from './shared/shared.module';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SharedModule } from './shared/shared.module';
     FlexLayoutModule,
     NgbModule
   ],
-  providers: [{
+  providers: [
+    DatePipe, {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthenticationInterceptor,
     multi: true

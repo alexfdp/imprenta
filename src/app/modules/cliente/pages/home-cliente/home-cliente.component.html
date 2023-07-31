@@ -1,10 +1,44 @@
 <div>
-    <div>
-        <mat-card>
-            <mat-card-content>Simple card</mat-card-content>
-        </mat-card>
-    </div>
-    <div>
-        <h2>Productos</h2>
+    <div *ngIf="productos2" class="caja_tabla">
+        <mat-toolbar class="toolbar_app toolbar_custo">
+
+        <h4>Productos</h4>
+
+        <span class="example-spacer"></span>
+
+        <button mat-icon-button color="primary" class="btn-cart btn btn-primary position-relative"
+            [routerLink]="['/cliente/cotizar']">
+            <mat-icon>shopping_cart</mat-icon>
+            <span *ngIf="tam" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{tam}}
+                <span class="visually-hidden">unread messages</span>
+            </span>
+        </button>
+
+    </mat-toolbar>
+        <mat-form-field>
+            <mat-label>Filtro</mat-label>
+            <input matInput [(ngModel)]="searchTerm" (keyup)="paginateCards()" placeholder="Ex. Taza" #input>
+        </mat-form-field>
+        <mat-paginator [length]="productos2.length" [pageSizeOptions]="[12, 16, 20]" (page)="onPageChange($event)"
+            showFirstLastButtons></mat-paginator>
+        <div class="row row-cols-1 row-cols-md-4 g-4 cartas">
+            <div *ngFor="let producto of paginatedCards" class="col example-card">
+                <mat-card class="h-100">
+                    <mat-card-header>
+                        <mat-card-title>{{producto.nombre}}</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image [src]="producto.imagen" class="imagen h-100" alt="Photo of a Shiba Inu">
+                    <mat-card-actions>
+                        <button mat-raised-button class="boton"
+                            (click)="openDialog(producto.idpp_producto, producto.nombre)">
+                            Añadir al carrito
+                            <mat-icon>add_shopping_cart</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+
     </div>
 </div>

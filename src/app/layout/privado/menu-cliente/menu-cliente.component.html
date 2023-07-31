@@ -17,20 +17,21 @@
 
         <button [routerLink]="['/cliente/cotizar']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
             <mat-icon>supervisor_account</mat-icon>
-            <span>Empleados</span>
+            <span>Cotizar</span>
+        </button>
+
+        <button [routerLink]="['/cliente/cotizaciones']" [routerLinkActive]="'optionActive'" mat-button
+            class="menu-button">
+            <mat-icon fontIcon="shelves"></mat-icon>
+            <span>Cotizaciones</span>
         </button>
 
         <button [routerLink]="['/cliente/pedidos']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
             <mat-icon>groups</mat-icon>
-            <span>Clientes</span>
-        </button>
-        <!-- 
-        <button [routerLink]="['/admin/proveedores']" [routerLinkActive]="'optionActive'" mat-button
-            class="menu-button">
-            <mat-icon fontIcon="shelves"></mat-icon>
-            <span>Proveedores</span>
+            <span>Pedidos</span>
         </button>
 
+        <!--
         <button [routerLink]="['/admin/ventas']" [routerLinkActive]="'optionActive'" mat-button class="menu-button">
             <mat-icon fontIcon="shopping_cart_checkout"></mat-icon>
             <span>Ventas</span>
@@ -63,7 +64,7 @@
 
         <mat-divider></mat-divider>
 
-        <button mat-button class="menu-button">
+        <button mat-button class="menu-button" (click)="logout()">
             <mat-icon>exit_to_app</mat-icon>
             <span>Cerrar Sesión</span>
         </button>

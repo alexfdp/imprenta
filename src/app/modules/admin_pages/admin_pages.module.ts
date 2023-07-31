@@ -15,6 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { CotizacionesComponent } from './pages/cotizaciones/cotizaciones.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,12 @@ import { ProductosComponent } from './pages/productos/productos.component';
     MaterialesComponent,
     EmpleadosComponent,
     ProductosComponent,
+    CotizacionesComponent,
   ],
   imports: [
     CommonModule,
     CurrencyPipe,
-    FormsModule,
+    // FormsModule,
     ReactiveFormsModule,
     admin_pagesRoutingModule,
     FlexLayoutModule,

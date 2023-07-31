@@ -10,6 +10,7 @@ import { ProveedoresComponent } from "./pages/proveedores/proveedores.component"
 import { MaterialesComponent } from "./pages/materiales/materiales.component";
 import { EmpleadosComponent } from "./pages/empleados/empleados.component";
 import { ProductosComponent } from "./pages/productos/productos.component";
+import { CotizacionesComponent } from "./pages/cotizaciones/cotizaciones.component";
 const rutas: Routes = [{
     path: '', children: [
         { path: 'users', component: UsuariosComponent },
@@ -21,7 +22,8 @@ const rutas: Routes = [{
         { path: 'proveedores', component: ProveedoresComponent },
         { path: 'materiales', component: MaterialesComponent },
         { path: 'empleados', component: EmpleadosComponent },
-        { path: 'productos', component: ProductosComponent }
+        { path: 'productos', component: ProductosComponent },
+        { path: 'cotizaciones', component: CotizacionesComponent }
     ]
 }];
 @NgModule({

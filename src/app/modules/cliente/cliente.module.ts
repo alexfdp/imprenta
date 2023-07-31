@@ -8,13 +8,15 @@ import { HomeClienteComponent } from './pages/home-cliente/home-cliente.componen
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CotizarComponent } from './pages/cotizar/cotizar.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { CotizacionesComponent } from './pages/cotizaciones/cotizaciones.component';
 
 @NgModule({
   declarations: [
     ClienteViewComponent,
     HomeClienteComponent,
     CotizarComponent,
-    PedidosComponent
+    PedidosComponent,
+    CotizacionesComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-cliente',
@@ -6,8 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-cliente.component.scss']
 })
 export class MenuClienteComponent {
+
   nombreUser = localStorage.getItem('name');
-  constructor() {
-    console.log("nombre: " + this.nombreUser);
+
+  constructor(private routerprd: Router) { }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('name');
+    localStorage.removeItem('rol');
+    this.routerprd.navigateByUrl("/sinsesion/login");
   }
 }

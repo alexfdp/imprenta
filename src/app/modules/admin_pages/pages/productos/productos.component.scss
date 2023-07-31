@@ -6,7 +6,11 @@
 
 .caja_tabla {
     // margin-top: 15px;
-    margin: 15px 10%;
+    margin: 15px 5%;
+}
+
+td img {
+    padding: 5%;
 }
 
 .demo-table {
@@ -41,13 +45,11 @@
 }
 
 .iconBtn {
-    cursor: pointer;
+    // cursor: pointer;
+    margin-right: 5px;
 }
 
-.delete {
-    color: #E15639;
-}
-
+.delete,
 .edit {
-    color: #187880;
+    color: white;
 }

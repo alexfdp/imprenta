@@ -1,0 +1,82 @@
+.contenedor {
+    display: flex;
+    width: calc(100vw - 90px);
+    height: calc(100vh - 90px);
+    justify-content: center;
+    align-items: center;
+}
+
+img.img_cart {
+    width: 30vw;
+    filter: invert(75%) sepia(1%) saturate(9%) hue-rotate(340deg) brightness(89%) contrast(86%);
+}
+
+div h3 {
+    text-align: center;
+    width: 30vw;
+    color: gray;
+}
+
+.example-container {
+    min-height: 40%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.caja_tabla {
+    margin: 15px 5%;
+}
+
+.demo-table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.mat-column-demo-position {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-demo-name {
+    padding-left: 16px;
+    font-size: 20px;
+}
+
+.mat-column-demo-weight {
+    font-style: italic;
+}
+
+.mat-column-demo-symbol {
+    width: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: blue;
+}
+
+.btn_aceptar {
+    background-color: #12ba12;
+    color: white;
+}
+
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }

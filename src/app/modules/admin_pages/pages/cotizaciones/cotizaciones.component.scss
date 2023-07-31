@@ -1,11 +1,21 @@
-.caja_tabla {
-    // margin-top: 15px;
-    margin: 15px 5%;
-}
 .example-container {
     max-width: 100%;
     max-height: 100%;
     overflow: auto;
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.caja_tabla {
+    // margin-top: 15px;
+    margin: 15px 5%;
+}
+
+td img {
+    padding: 5%;
 }
 
 .demo-table {
@@ -40,21 +50,11 @@
 }
 
 .iconBtn {
-    cursor: pointer;
+    // cursor: pointer;
+    margin-right: 5px;
 }
 
-.delete {
-    color: #E15639;
-}
-
+.delete,
 .edit {
-    color: #187880;
+    color: white;
 }
-
-// .mat-mdc-table-sticky-border-elem-right {
-//     border-left: 1px solid #e0e0e0;
-// }
-
-// .mat-mdc-table-sticky-border-elem-left {
-//     border-right: 1px solid #e0e0e0;
-// }

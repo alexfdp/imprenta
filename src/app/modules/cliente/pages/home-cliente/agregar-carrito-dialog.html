@@ -1,0 +1,45 @@
+<div mat-dialog-content class="row g-3">
+    <form #forma="ngForm">
+        <div class="col-12">
+            <p>Ingresar Nuevo Producto</p>
+        </div>
+
+        <!-- <br> -->
+        <div class="col-12">
+            <label class="form-label">Nombre del producto</label>
+            <input type="text" class="form-control" #name="ngModel" matInput [(ngModel)]="data.nombre"
+                placeholder="Ex. Libro" [textContent]="data.nombre" minlength="4" required name="name" disabled>
+            
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Descripcion de su diseño personalizado</label>
+            <textarea type="text" matInput [(ngModel)]="data.detalles" class="form-control"
+                placeholder="Ex. diseño con mi logo" #detalles="ngModel" name="detalles" required
+                [ngClass]="{'is-valid':!detalles.invalid,'is-invalid':detalles.invalid}"></textarea>
+            <div class="invalid-feedback" *ngIf="detalles.invalid && (detalles.dirty || detalles.touched)">
+                <div *ngIf="detalles.errors?.['required']">
+                    Introduzca la descripción
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Cantidad</label>
+            <input type="number" matInput [(ngModel)]="data.cantidad" class="form-control" placeholder="Ex. 5"
+                #cantidad="ngModel" name="cantidad" required min="1"
+                [ngClass]="{'is-valid':!cantidad.invalid,'is-invalid':cantidad.invalid}">
+            <div class="invalid-feedback" *ngIf="cantidad.invalid && (cantidad.dirty || cantidad.touched)">
+                <div *ngIf="cantidad.errors?.['required']">
+                    Introduzca la descripción
+                </div>
+            </div>
+        </div>
+
+        <div mat-dialog-actions class="col-12">
+            <button mat-button (click)="onNoClick()">Cancel</button>
+            <button mat-button [mat-dialog-close]="data" [disabled]="!forma.valid" cdkFocusInitial>Ok</button>
+        </div>
+
+    </form>
+</div>

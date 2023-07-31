@@ -61,9 +61,20 @@
             <span>Pedidos</span>
         </button>
 
+        <button [routerLink]="['/admin/cotizaciones']" [routerLinkActive]="'optionActive'" mat-button
+            class="menu-button">
+            <mat-icon fontIcon="request_quote"></mat-icon>
+            <span>Cotizaciones</span>
+            <span *ngIf="num"
+                class="position-absolute top-0 start-100 p-1 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">Nuevas cotizaciones</span>
+            </span>
+            <!-- <span class="badge text-bg-secondary">5</span> -->
+        </button>
+
         <mat-divider></mat-divider>
 
-        <button mat-button class="menu-button">
+        <button mat-button (click)="logout()" class="menu-button">
             <mat-icon>exit_to_app</mat-icon>
             <span>Cerrar Sesión</span>
         </button>

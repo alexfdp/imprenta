@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       },
       error: (response: any) => {
         alert("Usuario o contraseña incorrecto");
-        console.log("error: " + response.error);
+        console.log("error: " + response.data);
       }
     });
   }
